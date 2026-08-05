@@ -103,6 +103,15 @@ footer {
     color: #526273;
     text-align: center;
 }
+/* Responsive maps, videos, and external tools */
+.responsive-embed {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    aspect-ratio: 16 / 9;
+    height: auto;
+    border: 0;
+}
 /* Mobile layout for screens 768px wide or smaller */
 @media (max-width: 768px) {
     body {
