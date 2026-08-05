@@ -103,3 +103,25 @@ footer {
     color: #526273;
     text-align: center;
 }
+/* Mobile layout for screens 768px wide or smaller */
+@media (max-width: 768px) {
+    body {
+        font-size: 1.125rem;
+        padding: 1rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    nav a {
+        display: block;
+        margin-right: 0;
+    }
+}
