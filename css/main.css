@@ -50,14 +50,14 @@ img {
     background-color: #0d4778;
 }
 
-/* Site logo */
 .site-logo {
-    width: 80px;
+    width: 6vw;
+    max-width: 100%;
 }
 
-/* Gallery thumbnails */
 .gallery-thumbnail {
-    width: 120px;
+    width: 10vw;
+    max-width: 100%;
 }
 
 /* Navigation */
@@ -112,25 +112,97 @@ footer {
     height: auto;
     border: 0;
 }
-/* Mobile layout for screens 768px wide or smaller */
-@media (max-width: 768px) {
+/* Capstone page container */
+.marketing-container {
+    width: 92%;
+    margin: 0 auto;
+}
+
+/* Responsive hero */
+.marketing-hero {
+    padding: 5vh 4vw;
+    text-align: center;
+}
+
+.hero-image {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin: 3vh auto;
+}
+
+/* Responsive feature and pricing layouts */
+.feature-grid,
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 2vw;
+}
+
+.feature-card,
+.pricing-card {
+    background-color: #ffffff;
+    border: 0.0625rem solid #c8d3df;
+    border-radius: 0.5rem;
+    padding: 2vw;
+}
+
+.pricing-card h2,
+.feature-card h2 {
+    color: #173b67;
+}
+
+/* Clear keyboard-focus indicator */
+a:focus-visible {
+    outline: 0.1875rem solid #ffbf47;
+    outline-offset: 0.1875rem;
+}
+
+/* Prevent long links from forcing horizontal scrolling */
+a,
+p,
+li {
+    overflow-wrap: anywhere;
+}
+/* Mobile layout */
+@media (max-width: 48rem) {
     body {
         font-size: 1.125rem;
-        padding: 1rem;
+        padding: 3vw;
     }
 
     h1 {
-        font-size: 2rem;
+        font-size: 8vw;
     }
 
     nav {
         display: flex;
         flex-direction: column;
-        gap: 0.75rem;
+        gap: 2vh;
     }
 
     nav a {
         display: block;
         margin-right: 0;
+    }
+
+    .site-logo {
+        width: 18vw;
+    }
+
+    .feature-grid,
+    .pricing-grid {
+        grid-template-columns: 1fr;
+        gap: 3vh;
+    }
+
+    .feature-card,
+    .pricing-card {
+        padding: 5vw;
+    }
+
+    .marketing-container {
+        width: 100%;
     }
 }
