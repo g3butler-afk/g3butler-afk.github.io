@@ -206,3 +206,105 @@ li {
         width: 100%;
     }
 }
+.hero-content {
+    width: min(100%, 700px);
+}
+
+.hero h1 {
+    font-size: clamp(2rem, 8vw, 4.5rem);
+    line-height: 1.1;
+}
+
+.content-section {
+    width: min(100% - 2rem, 1100px);
+    margin-inline: auto;
+    padding-block: 3rem;
+}
+
+.story-layout,
+.contact-grid {
+    display: grid;
+    gap: 2rem;
+}
+
+.staff-photo {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+}
+
+.pricing-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.pricing-table th,
+.pricing-table td {
+    padding: 1rem;
+    border: 1px solid #555555;
+    text-align: left;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 120px);
+    gap: 1rem;
+    justify-content: center;
+}
+
+.gallery-grid img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+}
+
+.map-container iframe {
+    width: 100%;
+    min-height: 350px;
+    border: 0;
+}
+
+@media (max-width: 768px) {
+    .story-layout,
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .pricing-table,
+    .pricing-table tbody,
+    .pricing-table tr,
+    .pricing-table th,
+    .pricing-table td {
+        display: block;
+        width: 100%;
+    }
+
+    .pricing-table thead {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        clip: rect(0 0 0 0);
+        white-space: nowrap;
+    }
+
+    .pricing-table tr {
+        margin-bottom: 1rem;
+        border: 2px solid #174f3b;
+    }
+}
+
+@media (max-width: 420px) {
+    .gallery-grid {
+        grid-template-columns: repeat(2, 120px);
+    }
+}
+
+@media (min-width: 769px) {
+    .story-layout,
+    .contact-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
